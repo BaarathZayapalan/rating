@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Rating Component</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="card">
+
+    <!-- Rating Screen -->
+    <section id="rating-screen">
+      <div class="star-icon">★</div>
+
+      <h1>How did we do?</h1>
+
+      <p class="description">
+        Please let us know how we did with your support
+        request. All feedback is appreciated to help us
+        improve our offering!
+      </p>
+
+      <div class="ratings" role="group" aria-label="Choose a rating">
+        <button class="rating" data-rating="1" aria-pressed="false">1</button>
+        <button class="rating" data-rating="2" aria-pressed="false">2</button>
+        <button class="rating" data-rating="3" aria-pressed="false">3</button>
+        <button class="rating" data-rating="4" aria-pressed="false">4</button>
+        <button class="rating" data-rating="5" aria-pressed="false">5</button>
+      </div>
+
+      <p id="error-message" aria-live="polite"></p>
+
+      <button id="submit-button" class="submit-button">
+        SUBMIT
+      </button>
+    </section>
+
+    <!-- Thank You Screen -->
+    <section id="thank-you-screen" hidden>
+      <div class="thank-you-illustration" aria-hidden="true">
+        <div class="receipt">▤<br>▤<br>▤</div>
+        <div class="orange-card">★</div>
+        <div class="orange-dot"></div>
+      </div>
+
+      <div class="selected-rating">
+        You selected <span id="selected-number">0</span> out of 5
+      </div>
+
+      <h2>Thank you!</h2>
+
+      <p class="thank-you-description">
+        We appreciate you taking the time to give a rating.
+        If you ever need more support, don't hesitate to
+        get in touch!
+      </p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
